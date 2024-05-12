@@ -11,6 +11,9 @@ class Solution {
         }
 
         String answer = n_str.substring(startIdx);
+        
+        // String answer = "" + Integer.parseInt(n_str);
+        // 이거면 끝.... 찢었다!
         return answer;
     }
 }
