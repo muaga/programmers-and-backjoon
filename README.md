@@ -1,7 +1,7 @@
 <div align='center'>
   
 # programmers and backjoon
-<strong>매일 약 10개</strong>의 프로그래머스와 백준 문제를 풀고 있습니다 ♥️  
+<strong>매일 약 5개</strong>의 프로그래머스와 백준 문제를 풀고 있습니다 ♥️  
   
 <br>
 
