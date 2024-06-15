@@ -1,22 +1,31 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int x = sc.nextInt();
 
-        int[] a = new int[n];
-        for (int c = 0; c < n; c++) {
-            int number = sc.nextInt();
-            a[c] = number;
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        int N = Integer.parseInt(st.nextToken()); // 문자열로 받기 때문에 int형으로 형변환
+        int X = Integer.parseInt(st.nextToken());
+        int[] arr = new int[N]; // 배열 생성
+
+        st = new StringTokenizer(br.readLine(), " ");
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(st.nextToken()); // 배열에 수열 A 값을 담아줌
         }
-
-        for (int num : a) {
-            if (num < x) {
-                System.out.print(num + " ");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < X) { // 배열에 있는 수열과 X 값 비교
+                bw.write(arr[i] + " "); // X보다 작은 값 출력
             }
         }
-        sc.close();
+        br.close();
+        bw.flush();
+        bw.close();
     }
 }
